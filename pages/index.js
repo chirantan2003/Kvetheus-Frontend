@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/layout";
-import FormJs from "./FormJs";
+import FormJs from "./formJs";
 import Results from "./results";
 import React from "react";
 

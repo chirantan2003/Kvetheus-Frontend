@@ -1,4 +1,3 @@
-import useSWR from "swr";
 import axios from "axios";
 import SubdomainsTable from "../../components/subdomainsTable";
 import { useEffect, useState } from "react";

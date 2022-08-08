@@ -2,8 +2,6 @@ import useSWR from "swr";
 import axios from "axios";
 import WhoIsTable from "../../components/whoIsTable";
 
-//make async ask vishesh
-
 export default function WhoIs(props) {
   const fetcher = (url) => axios.get(url).then((response) => response.data);
   console.log(props.name, "this is domain name");

@@ -20,5 +20,3 @@ export default function MacAddress(props) {
     </div>
   );
 }
-
-// 98-3B-8F-C6-B5-0B
