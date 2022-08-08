@@ -1,0 +1,13 @@
+  .table {
+    border: 2px solid forestgreen;
+    margin: auto;
+    text-align: center;
+    width: 90vw;
+    color: black;
+    font-weight: 400;
+  }
+    
+  .heading {
+    border-bottom: 1px solid black;
+    width: 8rem;
+  }
