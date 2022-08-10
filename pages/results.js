@@ -1,6 +1,6 @@
-import WhoIs from "./tools/whoIs";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import WhoIs from "./tools/whoIs";
 import MacAddress from "./tools/macAddress";
 import Subdomains from "./tools/subdomains";
 import DnsEnumeration from "./tools/dnsEnumeration";

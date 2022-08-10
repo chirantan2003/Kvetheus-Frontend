@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
 html,
 body {
   padding: 0;
@@ -5,9 +7,56 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 h1 {
     color: #341d5c;
 }
+
+.componentsBody {
+  background-color: #202935;
+}
+
+.submitButtons {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+form input {
+  padding: 0.75rem;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 50vw;
+}
+form label {
+  font-size: 4rem;
+  font-family: 'Teko', sans-serif;
+}
+
+form button {
+  margin: 0 1rem;
+  background-color: #5e4a83;
+  border-radius: 100px;
+  box-shadow: rgba(21, 12, 37, .2) 0 -25px 18px -14px inset,rgba(21, 12, 37, .15) 0 1px 2px,rgba(21, 12, 37, .15) 0 2px 4px,rgba(21, 12, 37, .15) 0 4px 8px,rgba(21, 12, 37, .15) 0 8px 16px,rgba(21, 12, 37, .15) 0 16px 32px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+form button:hover {
+  box-shadow: rgba(21, 12, 37,.35) 0 -25px 18px -14px inset,rgba(21, 12, 37,.25) 0 1px 2px,rgba(21, 12, 37,.25) 0 2px 4px,rgba(21, 12, 37,.25) 0 4px 8px,rgba(21, 12, 37,.25) 0 8px 16px,rgba(21, 12, 37,.25) 0 16px 32px;
+  transform: scale(1.05);
+}
+
