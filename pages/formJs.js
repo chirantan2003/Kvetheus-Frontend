@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 
 export default function FormJs() {
   const [fWhoIs, setfWhoIs] = useState(false);
@@ -12,7 +12,6 @@ export default function FormJs() {
   const submitContact = async (event) => {
     event.preventDefault();
     const linkUrl = event.target.link.value;
-    // alert(linkUrl);
     router.push(
       {
         pathname: "results",
@@ -25,25 +24,50 @@ export default function FormJs() {
         },
       },
       "results"
-      // Uncomment the above line to remove the states from URL
     );
     console.log(fWhoIs, "this is values in router");
   };
 
+  const validMAC = new RegExp("^(?:[0-9A-Fa-f]{2}[:-]){5}(?:[0-9A-Fa-f]{2})$");
+
+  const validURL = new RegExp(
+    "(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?"
+  );
+
   const submitWhoIs = async () => {
-    setfWhoIs(true);
+    if (!validURL.test(link.value)) {
+      alert("Enter Valid URL");
+      link.value = null;
+    } else {
+      setfWhoIs(true);
+    }
   };
 
   const submitMacAddress = async () => {
-    setfMacAddress(true);
+    if (!validMAC.test(link.value)) {
+      alert("Enter Valid MAC Address");
+      link.value = null;
+    } else {
+      setfMacAddress(true);
+    }
   };
 
   const submitSubDomains = async () => {
-    setfSubDomains(true);
+    if (!validURL.test(link.value)) {
+      alert("Enter Valid URL");
+      link.value = null;
+    } else {
+      setfSubDomains(true);
+    }
   };
 
   const submitDnsEnumeration = async () => {
-    setfDnsEnumeration(true);
+    if (!validURL.test(link.value)) {
+      alert("Enter Valid URL");
+      link.value = null;
+    } else {
+      setfDnsEnumeration(true);
+    }
   };
 
   return (
@@ -51,7 +75,7 @@ export default function FormJs() {
       <div>
         <form onSubmit={submitContact}>
           <label htmlFor="link" className="mb-2 italic">
-            Insert Information
+            KVETHEUS
           </label>
           <br></br>
           <input
@@ -60,36 +84,39 @@ export default function FormJs() {
             name="link"
             type="text"
             autocomplete="link"
+            placeholder="Search"
             required
           />
-          <button
-            onClick={submitWhoIs}
-            type="submit"
-            className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-          >
-            Who is
-          </button>
-          <button
-            onClick={submitMacAddress}
-            type="submit"
-            className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-          >
-            Mac Address
-          </button>
-          <button
-            onClick={submitSubDomains}
-            type="submit"
-            className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-          >
-            Sub Domains
-          </button>
-          <button
-            onClick={submitDnsEnumeration}
-            type="submit"
-            className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-          >
-            Dns Enumeration
-          </button>
+          <div className="submitButtons">
+            <button
+              onClick={submitWhoIs}
+              type="submit"
+              className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
+            >
+              Who is
+            </button>
+            <button
+              onClick={submitMacAddress}
+              type="submit"
+              className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
+            >
+              Mac Address
+            </button>
+            <button
+              onClick={submitSubDomains}
+              type="submit"
+              className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
+            >
+              Sub Domains
+            </button>
+            <button
+              onClick={submitDnsEnumeration}
+              type="submit"
+              className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
+            >
+              Dns Enumeration
+            </button>
+          </div>
         </form>
       </div>
     </>
