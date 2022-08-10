@@ -25,7 +25,6 @@ export default function FormJs() {
       },
       "results"
     );
-    console.log(fWhoIs, "this is values in router");
   };
 
   const validMAC = new RegExp("^(?:[0-9A-Fa-f]{2}[:-]){5}(?:[0-9A-Fa-f]{2})$");
@@ -83,7 +82,7 @@ export default function FormJs() {
             id="link"
             name="link"
             type="text"
-            autocomplete="link"
+            autoComplete="link"
             placeholder="Search"
             required
           />

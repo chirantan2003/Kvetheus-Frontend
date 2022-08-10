@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
 import DnsEnumerationTable from "../../components/dnsEnumerationTable";
 
 export default function DnsEnumeration(props) {
@@ -14,20 +14,15 @@ export default function DnsEnumeration(props) {
       .then(
         (response) => {
           response;
-          while (!response) return <div>loading...</div>;
-          console.log(response);
-          // console.log(response.data.subdomains);
           setFetchData(response.data);
         },
         (error) => {
-          console.log(error);
           if (error) return <div>failed to load</div>;
         }
       );
   }, []);
 
-  // console.log(data.data, "this is data consoled");
-  console.log(fetchData, "this is fetched data");
+  while (fetchData == "") return <div>loading...</div>;
 
   return (
     <div>

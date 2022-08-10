@@ -17,9 +17,6 @@ export default function Results() {
   const url = "http://127.0.0.1:5000/v1/api/";
 
   const link = rQuery.link;
-  useEffect(() => {
-    console.log(link, "this is useEffect");
-  }, [rQuery]);
 
   useEffect(() => {
     setWhoIsTrue(rQuery.whoIsTrue);
@@ -38,9 +35,7 @@ export default function Results() {
     } else if (dnsEnumerationTrue == "true") {
       return <DnsEnumeration name={link} mainUrl={url} />;
     }
-    console.log(typeof whoIstrue, "this is whoistrue in results");
   };
 
-  console.log(macAddressTrue, "this is macAddressTrue in results");
   return <div>{componentRender()}</div>;
 }

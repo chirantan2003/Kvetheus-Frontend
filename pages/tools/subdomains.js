@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import axios from "axios";
 import SubdomainsTable from "../../components/subdomainsTable";
-import { useEffect, useState } from "react";
 
 export default function WhoIs(props) {
   const componentUrl = "domain/subdomains?q=";
@@ -14,20 +14,15 @@ export default function WhoIs(props) {
       .then(
         (response) => {
           response;
-          while (!response) return <div>loading...</div>;
-          console.log(response);
-          // console.log(response.data.subdomains);
           setFetchData(response.data.subdomains);
         },
         (error) => {
-          console.log(error);
           if (error) return <div>failed to load</div>;
         }
       );
   }, []);
 
-  // console.log(data.data, "this is data consoled");
-  console.log(fetchData, "this is fetched data");
+  while (fetchData == "") return <div>loading...</div>;
 
   return (
     <div>
