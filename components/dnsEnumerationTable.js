@@ -7,24 +7,24 @@ export default function DnsEnumerationTable(props) {
     val = val.response;
     const obj = val;
 
-    let content = [];
+    const content = [];
 
     function pushContent(objKey, objValue) {
       content.push(
         <>
           <tr>
-            <td>{objKey}</td>
+            <td className={styles.name}>{objKey}</td>
             <td>{String(objValue)}</td>
           </tr>
         </>
       );
     }
 
-    for (let objKey in val) {
+    for (const objKey in val) {
       const objValue = obj[objKey];
 
-      if (typeof objValue == "object") {
-        for (let newObjKey in objValue) {
+      if (typeof objValue === "object") {
+        for (const newObjKey in objValue) {
           const newObjValue = objValue[newObjKey];
           pushContent(objKey, newObjValue);
         }
@@ -50,7 +50,6 @@ export default function DnsEnumerationTable(props) {
           </thead>
           <tbody>{records}</tbody>
         </table>
-        <pre>{JSON.stringify(data, null, 1)}</pre>
       </div>
     </>
   );

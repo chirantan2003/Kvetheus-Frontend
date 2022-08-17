@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Layout from "../components/layout";
 import "../styles/global.css";
 
 export default function App({ Component, pageProps }) {
@@ -7,7 +8,10 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Kvetheus</title>
       </Head>
-      <Component {...pageProps} />
+      <Layout></Layout>
+      <div className="body">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

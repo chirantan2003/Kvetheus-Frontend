@@ -1,8 +1,5 @@
-.container {    
-    max-width: fit-content;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+.container {  
+    margin-top: 0;  
     font-weight: 700;
-    color: #341d5c;
+    color: var(--white);
 }

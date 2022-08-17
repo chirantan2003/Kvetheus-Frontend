@@ -1,62 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Rubik+Maze&family=Teko&display=swap');
+
+
+:root {
+  --cyan: #00e6f6;
+  --blue: #1f6cab;
+  --darkBlue: #082a3a;
+  --white: #FFFFFF;
+  --navy: #111827;
+}
 
 html,
 body {
-  padding: 0;
-  margin: 10px;
+  background-color: var(--navy);
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
-h1 {
-    color: #341d5c;
-}
-
-.componentsBody {
-  background-color: #202935;
-}
-
-.submitButtons {
-  display: flex;
-  justify-content: center;
+.body{
   padding: 2rem;
 }
 
-form input {
-  padding: 0.75rem;
-  border: 3px solid black;
-  border-radius: 10px;
-  width: 50vw;
+h1{
+  color: var(--cyan);
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
 }
+
+h2{
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.08rem;
+}
+
+p{
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 0.01rem;
+}
+
+th {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+td{
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+}
+
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+
+.form{
+  width: max-content;
+  margin: 20vh auto;
+}
+
 form label {
+  color: var(--cyan);
   font-size: 4rem;
-  font-family: 'Teko', sans-serif;
+  font-family: 'rubik maze', cursive;
+  letter-spacing: 0.25rem;
+}
+
+form input {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--darkBlue);
+  color: var(--white);
+  width: 50vw;
+  padding: 0.75rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder{
+  color: var(--cyan);
+}
+
+input:focus::placeholder{
+  color: transparent;
 }
 
 form button {
-  margin: 0 1rem;
-  background-color: #5e4a83;
-  border-radius: 100px;
-  box-shadow: rgba(21, 12, 37, .2) 0 -25px 18px -14px inset,rgba(21, 12, 37, .15) 0 1px 2px,rgba(21, 12, 37, .15) 0 2px 4px,rgba(21, 12, 37, .15) 0 4px 8px,rgba(21, 12, 37, .15) 0 8px 16px,rgba(21, 12, 37, .15) 0 16px 32px;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
+  border: none;
+  background-color: var(--blue);
+  border-radius: 5px;color: var(--white);
+  font-size: 1rem;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 7px 20px;
-  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-right: -1rem;
   transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  cursor: pointer;
 }
 
 form button:hover {
-  box-shadow: rgba(21, 12, 37,.35) 0 -25px 18px -14px inset,rgba(21, 12, 37,.25) 0 1px 2px,rgba(21, 12, 37,.25) 0 2px 4px,rgba(21, 12, 37,.25) 0 4px 8px,rgba(21, 12, 37,.25) 0 8px 16px,rgba(21, 12, 37,.25) 0 16px 32px;
-  transform: scale(1.05);
+  box-shadow: rgba(31, 108, 171,.05) 0 -25px 18px -14px inset,rgba(31, 108, 171,.05) 0 1px 2px,rgba(31, 108, 171,.0) 0 2px 4px,rgba(31, 108, 171,.05) 0 4px 8px,rgba(31, 108, 171,.05) 0 8px 16px,rgba(31, 108, 171,.05) 0 16px 32px;
 }
-
+  
+.submitButtons {
+  display: flex;
+  justify-content: right;
+  padding: 1rem;
+}

@@ -5,22 +5,21 @@ export default function MacAddressTable(props) {
 
   const records = data.map((val) => {
     val = val.result;
-    const obj = val;
 
-    let content = [];
+    const content = [];
 
     function pushContent(objKey, objValue) {
       content.push(
         <>
           <tr>
-            <td>{objKey}</td>
+            <td className={styles.name}>{objKey}</td>
             <td>{String(objValue)}</td>
           </tr>
         </>
       );
     }
 
-    for (let objKey in val) {
+    for (const objKey in val) {
       const item = val;
       const objValue = item[objKey];
       pushContent(objKey, objValue);
@@ -42,7 +41,6 @@ export default function MacAddressTable(props) {
           </thead>
           <tbody>{records}</tbody>
         </table>
-        <pre>{JSON.stringify(data, null, 1)}</pre>
       </div>
     </>
   );

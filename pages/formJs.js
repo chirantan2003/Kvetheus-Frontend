@@ -8,6 +8,7 @@ export default function FormJs() {
   const [fDnsEnumeration, setfDnsEnumeration] = useState(false);
 
   const router = useRouter();
+  const title = router.query.title;
 
   const submitContact = async (event) => {
     event.preventDefault();
@@ -27,93 +28,81 @@ export default function FormJs() {
     );
   };
 
+  const submitTitle = async () => {
+    if (title == "WhoIs") {
+      console.log("this works");
+      submitWhoIs();
+    } else if (title == "MAC Address") {
+      submitMacAddress();
+    } else if (title == "Sub Domains") {
+      submitSubDomains();
+    } else if (title == "DNS Enumeration") {
+      submitDnsEnumeration();
+    }
+  };
+
   const validMAC = new RegExp("^(?:[0-9A-Fa-f]{2}[:-]){5}(?:[0-9A-Fa-f]{2})$");
 
   const validURL = new RegExp(
     "(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?"
   );
 
-  const submitWhoIs = async () => {
+  function submitWhoIs() {
     if (!validURL.test(link.value)) {
       alert("Enter Valid URL");
       link.value = null;
     } else {
       setfWhoIs(true);
     }
-  };
+  }
 
-  const submitMacAddress = async () => {
+  function submitMacAddress() {
     if (!validMAC.test(link.value)) {
       alert("Enter Valid MAC Address");
       link.value = null;
     } else {
       setfMacAddress(true);
     }
-  };
+  }
 
-  const submitSubDomains = async () => {
+  function submitSubDomains() {
     if (!validURL.test(link.value)) {
       alert("Enter Valid URL");
       link.value = null;
     } else {
       setfSubDomains(true);
     }
-  };
+  }
 
-  const submitDnsEnumeration = async () => {
+  function submitDnsEnumeration() {
     if (!validURL.test(link.value)) {
       alert("Enter Valid URL");
       link.value = null;
     } else {
       setfDnsEnumeration(true);
     }
-  };
+  }
 
   return (
     <>
-      <div>
+      <div className="form">
         <form onSubmit={submitContact}>
           <label htmlFor="link" className="mb-2 italic">
-            KVETHEUS
+            Kvetheus<span className="text-white">.</span>
           </label>
-          <br></br>
+          <br />
           <input
             className="mb-4 border-b-2"
             id="link"
             name="link"
             type="text"
             autoComplete="link"
-            placeholder="Search"
+            placeholder={title}
             required
           />
           <div className="submitButtons">
-            <button
-              onClick={submitWhoIs}
-              type="submit"
-              className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-            >
-              Who is
-            </button>
-            <button
-              onClick={submitMacAddress}
-              type="submit"
-              className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-            >
-              Mac Address
-            </button>
-            <button
-              onClick={submitSubDomains}
-              type="submit"
-              className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-            >
-              Sub Domains
-            </button>
-            <button
-              onClick={submitDnsEnumeration}
-              type="submit"
-              className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
-            >
-              Dns Enumeration
+            <button onClick={submitTitle} type="submit">
+              Kvetheus Search
             </button>
           </div>
         </form>

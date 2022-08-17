@@ -4,22 +4,20 @@ export default function WhoIsTable(props) {
   const data = [props.serverData];
 
   const records = data.map((val) => {
-    const obj = val;
-
-    let content = [];
+    const content = [];
 
     function pushContent(objKey, objValue) {
       content.push(
         <>
           <tr>
-            <td>{objKey}</td>
+            <td className={styles.name}>{objKey}</td>
             <td>{String(objValue)}</td>
           </tr>
         </>
       );
     }
 
-    outerLoop: for (let objKey in val) {
+    outerLoop: for (const objKey in val) {
       const item = val;
       const objValue = item[objKey];
 
@@ -33,7 +31,7 @@ export default function WhoIsTable(props) {
             pushContent(objKey, null);
           } else {
             const owner = valArr.owner[0];
-            for (let arrKey in owner) {
+            for (const arrKey in owner) {
               const arrKeyValue = owner[arrKey];
               pushContent("Contacts " + arrKey, arrKeyValue);
             }
@@ -45,7 +43,7 @@ export default function WhoIsTable(props) {
       // for keys nested in registrar
       if (objKey == "registrar") {
         const arr = [objValue].map((valArr) => {
-          for (let arrKey in valArr) {
+          for (const arrKey in valArr) {
             const arrKeyValue = valArr[arrKey];
             pushContent("Registrar " + arrKey, arrKeyValue);
           }
@@ -72,7 +70,6 @@ export default function WhoIsTable(props) {
           </thead>
           <tbody>{records}</tbody>
         </table>
-        <pre>{JSON.stringify(data, null, 1)}</pre>
       </div>
     </>
   );

@@ -4,7 +4,7 @@ export default function SubdomainsTable(props) {
   const data = [props.serverData];
 
   const records = data.map((val) => {
-    let content = [];
+    const content = [];
 
     function pushContent(dataValue) {
       content.push(
@@ -16,7 +16,7 @@ export default function SubdomainsTable(props) {
       );
     }
 
-    for (let obj in val) {
+    for (const obj in val) {
       const item = val;
       const objValue = item[obj];
       pushContent(objValue);
@@ -37,7 +37,6 @@ export default function SubdomainsTable(props) {
           </thead>
           <tbody>{records}</tbody>
         </table>
-        <pre>{JSON.stringify(data, null, 1)}</pre>
       </div>
     </>
   );
