@@ -1,3 +1,9 @@
+.backgroundImg{
+    background-image: url("../components/images/bgLeft.svg"), url("../components/images/bgRight.svg");
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+}
+
 .format{
     padding: 1.5rem;
     display: flex;

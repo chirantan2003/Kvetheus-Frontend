@@ -1,5 +1,8 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Image from "next/image";
+import searchIcon from "../components/images/searchIcon.svg";
+import logo from "../components/images/logo.svg";
 
 export default function FormJs() {
   const [fWhoIs, setfWhoIs] = useState(false);
@@ -9,6 +12,7 @@ export default function FormJs() {
 
   const router = useRouter();
   const title = router.query.title;
+  const placeholder = `Search for a ${title}....`;
 
   const submitContact = async (event) => {
     event.preventDefault();
@@ -84,29 +88,25 @@ export default function FormJs() {
   }
 
   return (
-    <>
-      <div className="form">
-        <form onSubmit={submitContact}>
-          <label htmlFor="link" className="mb-2 italic">
-            Kvetheus<span className="text-white">.</span>
-          </label>
-          <br />
+    <div className="form">
+      <Image src={logo} />
+      <form onSubmit={submitContact}>
+        <h1>{title}</h1>
+        <div className="searchBar">
           <input
             className="mb-4 border-b-2"
             id="link"
             name="link"
             type="text"
             autoComplete="link"
-            placeholder={title}
+            placeholder={placeholder}
             required
           />
-          <div className="submitButtons">
-            <button onClick={submitTitle} type="submit">
-              Kvetheus Search
-            </button>
-          </div>
-        </form>
-      </div>
-    </>
+          <button onClick={submitTitle} type="submit">
+            <Image src={searchIcon} />
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }

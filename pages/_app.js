@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/layout";
+import Footer from "../components/footer";
 import "../styles/global.css";
 
 export default function App({ Component, pageProps }) {
@@ -11,6 +12,7 @@ export default function App({ Component, pageProps }) {
       <Layout></Layout>
       <div className="body">
         <Component {...pageProps} />
+        <Footer />
       </div>
     </>
   );

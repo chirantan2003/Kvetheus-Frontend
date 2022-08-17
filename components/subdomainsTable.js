@@ -25,7 +25,7 @@ export default function SubdomainsTable(props) {
   });
 
   return (
-    <>
+    <div className={styles.body}>
       <h1>Subdomains records</h1>
 
       <div>
@@ -38,6 +38,6 @@ export default function SubdomainsTable(props) {
           <tbody>{records}</tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }

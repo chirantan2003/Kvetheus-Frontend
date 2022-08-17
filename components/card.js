@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./card.module.css";
+import Image from "next/image";
 
 export default function Cards(props) {
   const [featureName, setFeatureName] = useState("");
@@ -23,7 +24,9 @@ export default function Cards(props) {
   return (
     <>
       <div className={styles.outer}>
-        <div className={styles.circle}></div>
+        <div className={styles.circle}>
+          <Image src={props.image} className={styles.icon} />
+        </div>
         <div className={styles.border}>
           <h2>{props.title}</h2>
           <p>{props.content}</p>

@@ -1,32 +1,32 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import DnsEnumerationTable from '../../components/dnsEnumerationTable'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import DnsEnumerationTable from "../../components/dnsEnumerationTable";
 
-export default function DnsEnumeration (props) {
-  const componentUrl = 'domain/records?domain='
-  const [fetchData, setFetchData] = useState('')
+export default function DnsEnumeration(props) {
+  const componentUrl = "domain/records?domain=";
+  const [fetchData, setFetchData] = useState("");
 
   useEffect(() => {
     axios
       .post(`${props.mainUrl}${componentUrl}${props.name}`, {
-        domain: props.name
+        domain: props.name,
       })
       .then(
         (response) => {
-          response
-          setFetchData(response.data)
+          response;
+          setFetchData(response.data);
         },
         (error) => {
-          if (error) return <div>failed to load</div>
+          if (error) return <div>failed to load</div>;
         }
-      )
-  }, [])
+      );
+  }, []);
 
-  while (fetchData == '') return <div>loading...</div>
+  while (fetchData == "") return <loading>loading...</loading>;
 
   return (
     <div>
       <DnsEnumerationTable serverData={fetchData} />
     </div>
-  )
+  );
 }

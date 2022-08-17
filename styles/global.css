@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Rubik+Maze&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Jost&display=swap');
 
 
 :root {
@@ -6,49 +6,46 @@
   --blue: #1f6cab;
   --darkBlue: #082a3a;
   --white: #FFFFFF;
-  --navy: #111827;
+  --navy: #011925;
 }
 
 html,
 body {
   background-color: var(--navy);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   overflow-x: hidden;
 }
 
-.body{
-  padding: 2rem;
-}
 
 h1{
   color: var(--cyan);
   line-height: 1.5;
-  letter-spacing: 0.2rem;
+  letter-spacing: -0.2%;
 }
 
 h2{
   font-size: 1.5rem;
   line-height: 1.5;
-  letter-spacing: 0.08rem;
+  letter-spacing: -0.2%;
 }
 
 p{
   font-size: 1rem;
   line-height: 1.25;
-  letter-spacing: 0.01rem;
+  letter-spacing: -0.4%;
 }
 
 th {
+  color: var(--cyan);
   font-size: 1.5rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: -0.4%;
 }
 
 td{
   line-height: 1.5;
-  letter-spacing: 0.05rem;
+  letter-spacing: -0.4%;
 }
 
 a{
@@ -58,24 +55,39 @@ a{
 
 
 .form{
-  width: max-content;
-  margin: 20vh auto;
+  background-image: url("../components/images/bgLeft.svg"), url("../components/images/pyramid.svg"), url("../components/images/globe.svg"),url("../components/images/spiral.svg");
+  background-repeat: no-repeat;
+  background-position: top right, bottom right, top left, bottom left;
+  width: 100vw;
+  height: 75vh;
+  margin: auto;
+  padding-top: 6rem;
+  text-align: center;
 }
 
-form label {
-  color: var(--cyan);
-  font-size: 4rem;
-  font-family: 'rubik maze', cursive;
-  letter-spacing: 0.25rem;
+.searchBar{
+  width: 45vw;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.22);
+  border-radius: 50px;
 }
 
-form input {
-  border: none;
-  border-radius: 10px;
-  background-color: var(--darkBlue);
+form h1 {
   color: var(--white);
-  width: 50vw;
-  padding: 0.75rem;
+  font-family: 'Jost';
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02rem;
+}
+
+form input {  
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  width: 40vw;
+  padding: 1rem;
 }
 
 input:focus {
@@ -83,7 +95,7 @@ input:focus {
 }
 
 ::placeholder{
-  color: var(--cyan);
+  color:  rgba(196, 234, 255, 0.47);
 }
 
 input:focus::placeholder{
@@ -92,25 +104,39 @@ input:focus::placeholder{
 
 form button {
   border: none;
-  background-color: var(--blue);
-  border-radius: 5px;color: var(--white);
-  font-size: 1rem;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  background-color: transparent;
+  vertical-align: center;
+  border-radius: 50px;
   text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  margin-right: -1rem;
-  transition: all 250ms;
+  vertical-align: middle;
   cursor: pointer;
 }
 
-form button:hover {
-  box-shadow: rgba(31, 108, 171,.05) 0 -25px 18px -14px inset,rgba(31, 108, 171,.05) 0 1px 2px,rgba(31, 108, 171,.0) 0 2px 4px,rgba(31, 108, 171,.05) 0 4px 8px,rgba(31, 108, 171,.05) 0 8px 16px,rgba(31, 108, 171,.05) 0 16px 32px;
+loading{
+  color: var(--cyan);
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 2rem;
 }
-  
-.submitButtons {
-  display: flex;
-  justify-content: right;
-  padding: 1rem;
+
+footer{
+  color: var(--white);
+  font-weight: 500;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer span{
+  color: red;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3E5965;
+  border-radius: 20px;
 }

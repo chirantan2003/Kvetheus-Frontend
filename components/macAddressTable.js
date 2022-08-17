@@ -28,7 +28,7 @@ export default function MacAddressTable(props) {
   });
 
   return (
-    <>
+    <div className={styles.body}>
       <h1>Mac Address Records</h1>
 
       <div>
@@ -42,6 +42,6 @@ export default function MacAddressTable(props) {
           <tbody>{records}</tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }

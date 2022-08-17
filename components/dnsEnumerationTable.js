@@ -37,7 +37,7 @@ export default function DnsEnumerationTable(props) {
   });
 
   return (
-    <>
+    <div className={styles.body}>
       <h1>DnsEnumeration</h1>
 
       <div>
@@ -51,6 +51,6 @@ export default function DnsEnumerationTable(props) {
           <tbody>{records}</tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }

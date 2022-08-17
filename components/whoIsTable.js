@@ -11,7 +11,7 @@ export default function WhoIsTable(props) {
         <>
           <tr>
             <td className={styles.name}>{objKey}</td>
-            <td>{String(objValue)}</td>
+            <td className={styles.data}>{String(objValue)}</td>
           </tr>
         </>
       );
@@ -57,7 +57,7 @@ export default function WhoIsTable(props) {
   });
 
   return (
-    <>
+    <div className={styles.body}>
       <h1>Domain Records</h1>
 
       <div>
@@ -71,6 +71,6 @@ export default function WhoIsTable(props) {
           <tbody>{records}</tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
