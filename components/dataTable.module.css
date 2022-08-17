@@ -3,33 +3,32 @@
   margin-top: -2rem;
   padding: 2rem;
   overflow-x: scroll;
-
 }
-
-.body::-webkit-scrollbar { width: 0 !important }
 
 .body h1{
   margin-left: 2.2rem;
 }
 
+.body::-webkit-scrollbar { width: 0 !important }
+
 .table {
   background-color: var(--navy);
   border-radius: 10px;
+  border-spacing: 1.5rem;
+  color: var(--white);
+  box-shadow: 5px 5px 15px rgba(0, 230, 246, 0.5);
+  font-weight: 400;
   margin: auto;
   margin-top: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   width: 90vw;
-  color: var(--white);
-  font-weight: 400;
-  border-spacing: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 5px 5px 15px rgba(0, 230, 246, 0.5);
   }
     
 .heading {
   border-bottom: 2px solid var(--blue);
-  line-height: 2.5rem;
   width: 8rem;
+  line-height: 2.5rem;
   }
 
 .name{

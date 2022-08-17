@@ -1,4 +1,4 @@
-import styles from "./whoIsTable.module.css";
+import styles from "./dataTable.module.css";
 
 export default function MacAddressTable(props) {
   const data = [props.serverData];

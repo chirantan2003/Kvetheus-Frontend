@@ -5,9 +5,9 @@
 }
 
 .format{
-    padding: 1.5rem;
     display: flex;
     gap: 5rem;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 1.5rem;
 }

@@ -4,7 +4,7 @@ import styles from "./navbar.module.css";
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <h1 className={styles.navbarH1}>
+      <h1 className={styles.navbarLogo}>
         <Link href="/">
           <a>
             Kvetheus
