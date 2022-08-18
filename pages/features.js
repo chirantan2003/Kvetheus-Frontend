@@ -1,9 +1,9 @@
 import styles from './features.module.css'
 import Cards from '../components/card'
-import whoIs from '../components/images/whois.svg'
-import mac from '../components/images/macAddress.svg'
-import subDomains from '../components/images/subdomains.svg'
-import dns from '../components/images/dns.svg'
+import whoIs from '../public/whois.svg'
+import mac from '../public/macAddress.svg'
+import subDomains from '../public/subdomains.svg'
+import dns from '../public/dns.svg'
 
 export default function Features () {
   return (

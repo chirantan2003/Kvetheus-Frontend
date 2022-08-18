@@ -1,5 +1,5 @@
 .backgroundImg{
-    background-image: url("../components/images/bgLeft.svg"), url("../components/images/bgRight.svg");
+    background-image: url("../public/bgLeft.svg"), url("../public/bgRight.svg");
     background-repeat: no-repeat;
     background-position: top right, bottom left;
 }

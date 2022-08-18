@@ -55,7 +55,7 @@ a{
 
 
 .form{
-  background-image: url("../components/images/bgLeft.svg"), url("../components/images/pyramid.svg"), url("../components/images/globe.svg"),url("../components/images/spiral.svg");
+  background-image: url("/bgLeft.svg"), url("/pyramid.svg"), url("/globe.svg"),url("/spiral.svg");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top right, bottom right, top left, bottom left;

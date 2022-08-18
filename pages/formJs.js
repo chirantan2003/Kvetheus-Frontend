@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import Image from 'next/image'
-import searchIcon from '../components/images/searchIcon.svg'
-import logo from '../components/images/logo.svg'
+import searchIcon from '../public/searchIcon.svg'
+import logo from '../public/logo.svg'
 
 export default function FormJs () {
   const [fWhoIs, setfWhoIs] = useState(false)
