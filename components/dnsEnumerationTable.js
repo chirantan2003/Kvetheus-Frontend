@@ -40,7 +40,7 @@ export default function DnsEnumerationTable (props) {
     <div className={styles.body}>
       <h1>DnsEnumeration</h1>
 
-      <div>
+      <div className={styles.flex}>
         <table className={styles.table}>
           <thead>
             <tr>
@@ -50,6 +50,7 @@ export default function DnsEnumerationTable (props) {
           </thead>
           <tbody>{records}</tbody>
         </table>
+        <div className={styles.empty} />
       </div>
     </div>
   )

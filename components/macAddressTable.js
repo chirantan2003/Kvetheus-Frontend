@@ -31,7 +31,7 @@ export default function MacAddressTable (props) {
     <div className={styles.body}>
       <h1>Mac Address Records</h1>
 
-      <div>
+      <div className={styles.flex}>
         <table className={styles.table}>
           <thead>
             <tr>
@@ -41,6 +41,7 @@ export default function MacAddressTable (props) {
           </thead>
           <tbody>{records}</tbody>
         </table>
+        <div className={styles.empty} />
       </div>
     </div>
   )

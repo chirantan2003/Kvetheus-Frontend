@@ -61,7 +61,7 @@ export default function WhoIsTable (props) {
     <div className={styles.body}>
       <h1>Domain Records</h1>
 
-      <div>
+      <div className={styles.flex}>
         <table className={styles.table}>
           <thead>
             <tr>
@@ -71,6 +71,7 @@ export default function WhoIsTable (props) {
           </thead>
           <tbody>{records}</tbody>
         </table>
+        <div className={styles.empty} />
       </div>
     </div>
   )
