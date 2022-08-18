@@ -23,8 +23,8 @@ export default function App ({ Component, pageProps }) {
       <Layout />
       <div className='body'>
         <Component {...pageProps} />
-        <Footer />
       </div>
+      <Footer />
     </>
   )
 }
