@@ -95,7 +95,7 @@ export default function FormJs () {
       <Image src={logo} />
       <form onSubmit={submitContact}>
         <h1>{title}</h1>
-        <div className='searchBar'>
+        <div className='searchbar'>
           <input
             className='mb-4 border-b-2'
             id='link'
