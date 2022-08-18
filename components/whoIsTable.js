@@ -22,7 +22,7 @@ export default function WhoIsTable (props) {
       const item = val
       const objValue = item[objKey]
 
-      if (objKey === 'rawdata') {
+      if (objKey === 'rawdata' || objKey === 'template') {
         continue outerLoop
       }
 
