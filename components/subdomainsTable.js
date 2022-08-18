@@ -1,28 +1,28 @@
-import styles from "./dataTable.module.css";
+import styles from './dataTable.module.css'
 
-export default function SubdomainsTable(props) {
-  const data = [props.serverData];
+export default function SubdomainsTable (props) {
+  const data = [props.serverData]
 
   const records = data.map((val) => {
-    const content = [];
+    const content = []
 
-    function pushContent(dataValue) {
+    function pushContent (dataValue) {
       content.push(
         <>
           <tr>
             <td>{dataValue}</td>
           </tr>
         </>
-      );
+      )
     }
 
     for (const obj in val) {
-      const item = val;
-      const objValue = item[obj];
-      pushContent(objValue);
+      const item = val
+      const objValue = item[obj]
+      pushContent(objValue)
     }
-    return content;
-  });
+    return content
+  })
 
   return (
     <div className={styles.body}>
@@ -39,5 +39,5 @@ export default function SubdomainsTable(props) {
         </table>
       </div>
     </div>
-  );
+  )
 }

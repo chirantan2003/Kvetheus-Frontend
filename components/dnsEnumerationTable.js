@@ -1,15 +1,15 @@
-import styles from "./dataTable.module.css";
+import styles from './dataTable.module.css'
 
-export default function DnsEnumerationTable(props) {
-  const data = [props.serverData];
+export default function DnsEnumerationTable (props) {
+  const data = [props.serverData]
 
   const records = data.map((val) => {
-    val = val.response;
-    const obj = val;
+    val = val.response
+    const obj = val
 
-    const content = [];
+    const content = []
 
-    function pushContent(objKey, objValue) {
+    function pushContent (objKey, objValue) {
       content.push(
         <>
           <tr>
@@ -17,24 +17,24 @@ export default function DnsEnumerationTable(props) {
             <td>{String(objValue)}</td>
           </tr>
         </>
-      );
+      )
     }
 
     for (const objKey in val) {
-      const objValue = obj[objKey];
+      const objValue = obj[objKey]
 
-      if (typeof objValue === "object") {
+      if (typeof objValue === 'object') {
         for (const newObjKey in objValue) {
-          const newObjValue = objValue[newObjKey];
-          pushContent(objKey, newObjValue);
+          const newObjValue = objValue[newObjKey]
+          pushContent(objKey, newObjValue)
         }
       } else {
-        pushContent(objKey, objValue);
+        pushContent(objKey, objValue)
       }
     }
 
-    return content;
-  });
+    return content
+  })
 
   return (
     <div className={styles.body}>
@@ -52,5 +52,5 @@ export default function DnsEnumerationTable(props) {
         </table>
       </div>
     </div>
-  );
+  )
 }

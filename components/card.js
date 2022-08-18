@@ -1,24 +1,24 @@
-import { useState } from "react";
-import { useRouter } from "next/router";
-import styles from "./card.module.css";
-import Image from "next/image";
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import styles from './card.module.css'
+import Image from 'next/image'
 
-export default function Cards(props) {
-  const [featureName, setFeatureName] = useState("");
-  const router = useRouter();
+export default function Cards (props) {
+  const [featureName, setFeatureName] = useState('')
+  const router = useRouter()
 
-  function checkVal() {
-    setFeatureName(props.title);
-    console.log(featureName, "this is running");
+  function checkVal () {
+    setFeatureName(props.title)
+    console.log(featureName, 'this is running')
     router.push(
       {
-        pathname: "../formJs",
+        pathname: '../formJs',
         query: {
-          title: props.title,
-        },
+          title: props.title
+        }
       },
-      "form"
-    );
+      'form'
+    )
   }
 
   return (
@@ -30,11 +30,11 @@ export default function Cards(props) {
         <div className={styles.border}>
           <h2>{props.title}</h2>
           <p>{props.content}</p>
-          <button className={styles.button} onClick={checkVal} type="submit">
+          <button className={styles.button} onClick={checkVal} type='submit'>
             Send
           </button>
         </div>
       </div>
     </>
-  );
+  )
 }

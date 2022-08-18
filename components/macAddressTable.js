@@ -1,14 +1,14 @@
-import styles from "./dataTable.module.css";
+import styles from './dataTable.module.css'
 
-export default function MacAddressTable(props) {
-  const data = [props.serverData];
+export default function MacAddressTable (props) {
+  const data = [props.serverData]
 
   const records = data.map((val) => {
-    val = val.result;
+    val = val.result
 
-    const content = [];
+    const content = []
 
-    function pushContent(objKey, objValue) {
+    function pushContent (objKey, objValue) {
       content.push(
         <>
           <tr>
@@ -16,16 +16,16 @@ export default function MacAddressTable(props) {
             <td>{String(objValue)}</td>
           </tr>
         </>
-      );
+      )
     }
 
     for (const objKey in val) {
-      const item = val;
-      const objValue = item[objKey];
-      pushContent(objKey, objValue);
+      const item = val
+      const objValue = item[objKey]
+      pushContent(objKey, objValue)
     }
-    return content;
-  });
+    return content
+  })
 
   return (
     <div className={styles.body}>
@@ -43,5 +43,5 @@ export default function MacAddressTable(props) {
         </table>
       </div>
     </div>
-  );
+  )
 }
