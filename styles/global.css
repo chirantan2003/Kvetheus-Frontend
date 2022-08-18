@@ -3,7 +3,7 @@
 :root {
   --cyan: #00e6f6;
   --blue: #1f6cab;
-  --darkBlue: #082a3a;
+  --dark-blue: #082a3a;
   --white: #fff;
   --navy: #011925;
 }
@@ -63,7 +63,7 @@ a {
   text-align: center;
 }
 
-.searchBar {
+.searchbar {
   max-width: 45vw;
   margin: auto;
   background-color: rgb(255 255 255 / 22%);
@@ -142,7 +142,7 @@ footer span {
 }
 
 @media screen and (max-width: 1375px) {
-  .searchBar {
+  .searchbar {
     max-width: 60vw;
     margin: auto;
     background-color: rgb(255 255 255 / 22%);

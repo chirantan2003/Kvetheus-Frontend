@@ -7,7 +7,7 @@ import dns from '../public/dns.svg'
 
 export default function Features () {
   return (
-    <div className={styles.backgroundImg}>
+    <div className={styles.backgroundimg}>
       <div className={styles.format}>
         <Cards
           title='WhoIs'

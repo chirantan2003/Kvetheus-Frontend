@@ -1,4 +1,4 @@
-.backgroundImg {
+.backgroundimg {
   background-image: url("../public/bgLeft.svg"), url("../public/bgRight.svg");
   background-repeat: no-repeat;
   background-position: top right, bottom left;
