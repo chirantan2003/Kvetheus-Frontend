@@ -11,8 +11,8 @@ export default function WhoIs (props) {
     fetcher
   )
 
-  if (error) return <loading>failed to load</loading>
-  if (!data) return <loading>loading...</loading>
+  if (error) return <h2 classname='loading'>failed to load</h2>
+  if (!data) return <h2 className='loading'>loading...</h2>
 
   return (
     <div>

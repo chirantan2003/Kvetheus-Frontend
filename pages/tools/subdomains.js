@@ -25,7 +25,7 @@ export default function WhoIs (props) {
 
   /* eslint no-unreachable-loop: ["error", { "ignore": ["WhileStatement"] }] */
   /* eslint no-unmodified-loop-condition: "off" */
-  while (fetchData === '') return <loading>loading...</loading>
+  while (fetchData === '') return <h2 className='loading'>loading...</h2>
 
   return (
     <div>
