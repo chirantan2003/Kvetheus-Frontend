@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import Image from 'next/image'
 import searchIcon from '../public/searchIcon.svg'
-import logo from '../public/logo.svg'
 
 export default function FormJs () {
   const [fWhoIs, setfWhoIs] = useState(false)
@@ -92,7 +91,6 @@ export default function FormJs () {
 
   return (
     <div className='form'>
-      <Image src={logo} />
       <form onSubmit={submitContact}>
         <h1>{title}</h1>
         <div className='searchbar'>

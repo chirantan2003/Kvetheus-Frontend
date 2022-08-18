@@ -4,7 +4,6 @@
 </a>
 	<h2 align="center"> Kvetheus </h2>
 	<h4 align="center"> An all-in-one GUI website which gives you a bunch of applications for OSINT in just one web app. There are many OSINT tools used for various limited features with a bad User Interface. This tool combines various other features and gives a proper User Interface for the ease of user. <br> 
-	<a href="http://kvetheus.vercel.app/">http://kvetheus.vercel.app/</a>
 	<h4>
 </p>
 
