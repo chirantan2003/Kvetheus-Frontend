@@ -1,20 +1,20 @@
-import { useRouter } from 'next/router'
-import styles from './card.module.css'
-import Image from 'next/image'
+import { useRouter } from "next/router";
+import styles from "./card.module.css";
+import Image from "next/image";
 
-export default function Cards (props) {
-  const router = useRouter()
+export default function Cards(props) {
+  const router = useRouter();
 
-  function checkVal () {
+  function checkVal() {
     router.push(
       {
-        pathname: '../formJs',
+        pathname: "../formJs",
         query: {
-          title: props.title
-        }
+          title: props.title,
+        },
       },
-      'form'
-    )
+      "form"
+    );
   }
 
   return (
@@ -26,11 +26,11 @@ export default function Cards (props) {
         <div className={styles.border}>
           <h2>{props.title}</h2>
           <p>{props.content}</p>
-          <button className={styles.button} onClick={checkVal} type='submit'>
-            Send
+          <button className={styles.button} onClick={checkVal} type="submit">
+            Search
           </button>
         </div>
       </div>
     </>
-  )
+  );
 }

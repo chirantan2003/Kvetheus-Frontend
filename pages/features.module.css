@@ -1,13 +1,13 @@
-.backgroundImg{
-    background-image: url("../public/bgLeft.svg"), url("../public/bgRight.svg");
-    background-repeat: no-repeat;
-    background-position: top right, bottom left;
+.backgroundImg {
+  background-image: url("../public/bgLeft.svg"), url("../public/bgRight.svg");
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
 }
 
-.format{
-    display: flex;
-    gap: 5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1.5rem;
+.format {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1.5rem;
 }

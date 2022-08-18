@@ -1,4 +1,4 @@
-.body{
+.body {
   background-color: var(--darkBlue);
   margin-top: -2rem;
   padding: 2rem;
@@ -6,44 +6,44 @@
   overflow-x: scroll;
 }
 
-.body h1{
+.body h1 {
   margin-left: 2.2rem;
 }
 
-.body::-webkit-scrollbar { width: 0 !important }
+.body::-webkit-scrollbar { width: 0 !important; }
 
 .table {
   background-color: var(--navy);
   border-radius: 10px;
   border-spacing: 1.5rem;
   color: var(--white);
-  box-shadow: 5px 5px 15px rgba(0, 230, 246, 0.5);
+  box-shadow: 5px 5px 15px rgb(0 230 246 / 50%);
   font-weight: 400;
-  margin: 3rem 2rem auto 2rem;
+  margin: 2rem 2rem auto;
   text-align: center;
   width: 90vw;
-  }
-    
+}
+
 .heading {
   border-bottom: 2px solid var(--blue);
   width: 8rem;
   line-height: 2.5rem;
-  }
+}
 
-.name{
+.name {
   color: var(--cyan);
   font-weight: 500;
   text-transform: capitalize;
-  }
+}
 
-.flex{
+.flex {
   display: flex;
 }
 
 @media screen and (max-width: 900px) {
-.empty{
-  width: 3rem;
-  height: 2rem;
-  border: 1px solid transparent;
-}
+  .empty {
+    width: 3rem;
+    height: 2rem;
+    border: 1px solid transparent;
+  }
 }
