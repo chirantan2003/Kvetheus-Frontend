@@ -1,15 +1,11 @@
-import { useState } from 'react'
 import { useRouter } from 'next/router'
 import styles from './card.module.css'
 import Image from 'next/image'
 
 export default function Cards (props) {
-  const [featureName, setFeatureName] = useState('')
   const router = useRouter()
 
   function checkVal () {
-    setFeatureName(props.title)
-    console.log(featureName, 'this is running')
     router.push(
       {
         pathname: '../formJs',

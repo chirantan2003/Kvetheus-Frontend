@@ -34,7 +34,6 @@ export default function FormJs () {
 
   const submitTitle = async () => {
     if (title === 'WhoIs') {
-      console.log('this works')
       submitWhoIs()
     } else if (title === 'MAC Address') {
       submitMacAddress()
