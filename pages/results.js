@@ -14,7 +14,7 @@ export default function Results () {
   const [subDomainsTrue, setSubDomainsTrue] = useState(false)
   const [dnsEnumerationTrue, setDnsEnumerationTrue] = useState(false)
 
-  const url = 'https://kvetheus-production.up.railway.app/v1/api/'
+  const url = process.env.NEXT_PUBLIC_API_URL
 
   const link = rQuery.link
 
