@@ -67,7 +67,7 @@ a{
 }
 
 .searchBar{
-  width: 45vw;
+  max-width: 45vw;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.22);
   border-radius: 50px;
@@ -142,4 +142,33 @@ footer span{
 ::-webkit-scrollbar-thumb {
   background-color: #3E5965;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 1375px) {
+    
+  .searchBar{
+    max-width: 60vw;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.22);
+    border-radius: 50px;
+  }
+
+  form input {  
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 1rem;
+    max-width: 40vw;
+    padding: 1rem;
+  }
+  
+  form button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+  }
 }
