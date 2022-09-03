@@ -1,0 +1,22 @@
+{
+    "name": "Kvetheus",
+    "short_name": "Kvetheus",
+    "description": "Advanced subdomain enumeration and information gathering tool. Also, an OSINT Framework for scanning IP Address, Emails, Websites, Organizations",
+    "icons":[
+        {
+        "src":"/android-chrome-192x192.png",
+        "sizes":"192x192",
+        "type":"image/png"
+    },
+    {
+        "src":"/android-chrome-512x512.png",
+        "sizes":"512x512",
+        "type":"image/png"
+        }
+        ],
+        "id": "/",
+        "start_url": ".",
+        "theme_color": "#011925",
+        "background_color": "#011925",
+        "display": "standalone"
+    }
