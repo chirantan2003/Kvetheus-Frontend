@@ -33,7 +33,7 @@ export default function App ({ Component, pageProps }) {
         <meta property='og:title' content='Kvetheus' />
         <meta
           property='og:description'
-          content='Advanced subdomain enumeration and information gathering tool. Also, an OSINT Framework for scanning IP Address, Emails, Websites, Organizations.'
+          content='OSINT framework for various information gathering tools.'
         />
         <meta name='language' content='en' />
         <meta name='url' content='https://kvetheus.dscvit.com/' />
@@ -47,6 +47,12 @@ export default function App ({ Component, pageProps }) {
         <meta name='og:region' content='Vellore' />
         <meta name='og:country-name' content='India' />
         <meta name='rating' content='General' />
+
+        <meta
+          name='description'
+          content='Kvetheus is an advanced subdomain enumeration and information gathering tool. Also, an OSINT Framework for scanning IP Address, Emails, Websites, Organizations.'
+        />
+        <meta itemprop=' description ' content='Kvetheus' />
 
         <link rel='canonical ' href='https://kvetheus.dscvit.com ' />
         <meta name='author' content='Vishesh Bansal and Chirantan Jain' />
